@@ -38,7 +38,7 @@ public class RenderSystem {
 
         try{
             ComponentBody componentBody = (ComponentBody) followEntity.findComponent(ComponentBody.class);
-            cameraMain.position.lerp(new Vector3(componentBody.getPosX() + componentBody.getSizeX() / 2, componentBody.getPosY() + componentBody.getSizeY() / 2, 0), 0.2f);
+            cameraMain.position.lerp(new Vector3(componentBody.getPosX() + componentBody.getSizeX() / 2, componentBody.getPosY() + componentBody.getSizeY() / 2, 0), 0.10f);
         }catch (Exception e){
 
         }
