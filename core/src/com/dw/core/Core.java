@@ -7,14 +7,17 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.dw.core.screens.ScreenGame;
+import com.dw.core.screens.ScreenMainMenu;
 
 public class Core extends Game {
 
 	public Screen screenGame;
+	public Screen screenMainMenu;
 
 	@Override
 	public void create () {
 		screenGame = new ScreenGame(this);
+		screenMainMenu = new ScreenMainMenu(this);
 		this.setScreen(screenGame);
 	}
 
@@ -29,4 +32,5 @@ public class Core extends Game {
 	public void dispose () {
 
 	}
+
 }
