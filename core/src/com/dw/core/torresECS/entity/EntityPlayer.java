@@ -12,8 +12,8 @@ public class EntityPlayer extends Entity {
     public EntityPlayer(){
         super();
         RenderSystem.setCameraFollow(this);
-        addComponent(new ComponentBody(this, 10, 10, 100, 100));
 
+        addComponent(new ComponentBody(this, 10, 10, 100, 100));
         addController(new ControllerPlayerMovement(this));
         addController(new ControllerCollisionDetection(this));
         addController(new ControllerRenderDebug(this));

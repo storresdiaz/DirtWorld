@@ -23,7 +23,6 @@ public class ComponentSprite {
         STATIC, ANIMATED, CODED
     }
 
-
     public ComponentSprite(SpriteType spriteType){
         this.spriteType = spriteType;
         animations = new HashMap<>();
@@ -128,5 +127,12 @@ public class ComponentSprite {
         }
     }
 
+    public SpriteType getSpriteType() {
+        return spriteType;
+    }
+
+    public void setSpriteType(SpriteType spriteType) {
+        this.spriteType = spriteType;
+    }
 
 }
