@@ -1,11 +1,11 @@
 package com.dw.core.torresECS.controller;
 
-import com.dw.core.torresECS.component.ComponentBody;
+import com.dw.core.torresECS.component.ComponentCollisionBody;
 import com.dw.core.torresECS.entity.Entity;
 
 public class ControllerCollisionDetection extends Controller{
 
-    private ComponentBody componentBody, componentBodyTarget;
+    private ComponentCollisionBody componentCollisionBody, componentCollisionBodyTarget;
 
     public ControllerCollisionDetection(Entity parentEntity) {
         super(parentEntity);
@@ -15,10 +15,10 @@ public class ControllerCollisionDetection extends Controller{
     public void update() {
 
         try{
-            componentBody = (ComponentBody) findComponent(ComponentBody.class);
-            componentBodyTarget = (ComponentBody) getTargetEntity().findComponent(ComponentBody.class);
+            componentCollisionBody = (ComponentCollisionBody) findComponent(ComponentCollisionBody.class);
+            componentCollisionBodyTarget = (ComponentCollisionBody) getTargetEntity().findComponent(ComponentCollisionBody.class);
 
-            if(componentBody.getRectangle().overlaps(componentBodyTarget.getRectangle()) &&
+            if(componentCollisionBody.getRectangle().overlaps(componentCollisionBodyTarget.getRectangle()) &&
                getParentEntity().getEntityID() != getTargetEntity().getEntityID()){
                 addTargetEntity(getTargetEntity());
             }else{

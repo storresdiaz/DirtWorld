@@ -1,6 +1,7 @@
 package com.dw.core.torresECS.entity;
 
 import com.dw.core.torresECS.component.Component;
+import com.dw.core.torresECS.component.ComponentProperties;
 import com.dw.core.torresECS.controller.Controller;
 import com.dw.core.torresECS.system.EntitySystem;
 
@@ -18,6 +19,7 @@ public class Entity {
     public Entity(){
         components = new ArrayList<>();
         controllers = new ArrayList<>();
+        addComponent(new ComponentProperties(this));
     }
 
     public void update() {

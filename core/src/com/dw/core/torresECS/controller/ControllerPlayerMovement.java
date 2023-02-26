@@ -2,12 +2,13 @@ package com.dw.core.torresECS.controller;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.dw.core.torresECS.component.ComponentBody;
+import com.dw.core.torresECS.component.ComponentCollisionBody;
+import com.dw.core.torresECS.component.ComponentProperties;
 import com.dw.core.torresECS.entity.Entity;
 
 public class ControllerPlayerMovement extends Controller {
 
-    private ComponentBody componentBody;
+    private ComponentProperties componentProperties;
 
     public ControllerPlayerMovement(Entity parentEntity) {
         super(parentEntity);
@@ -18,20 +19,20 @@ public class ControllerPlayerMovement extends Controller {
     public void update() {
 
         try{
-            componentBody = (ComponentBody) findComponent(ComponentBody.class);
+            componentProperties = (ComponentProperties) findComponent(ComponentProperties.class);
 
             // Right
             if(Gdx.input.isKeyPressed(Input.Keys.D)) {
-                componentBody.setPosX(componentBody.getPosX() + 5);
+                componentProperties.setPosX(componentProperties.getPosX() + 5);
             }
             if(Gdx.input.isKeyPressed(Input.Keys.A)){
-                componentBody.setPosX(componentBody.getPosX() - 5);
+                componentProperties.setPosX(componentProperties.getPosX() - 5);
             }
             if(Gdx.input.isKeyPressed(Input.Keys.W)){
-                componentBody.setPosY(componentBody.getPosY() - 5);
+                componentProperties.setPosY(componentProperties.getPosY() - 5);
             }
             if(Gdx.input.isKeyPressed(Input.Keys.S)){
-                componentBody.setPosY(componentBody.getPosY() + 5);
+                componentProperties.setPosY(componentProperties.getPosY() + 5);
             }
 
 

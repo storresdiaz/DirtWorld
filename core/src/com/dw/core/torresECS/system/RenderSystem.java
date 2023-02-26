@@ -4,7 +4,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.dw.core.torresECS.component.ComponentBody;
+import com.dw.core.torresECS.component.ComponentCollisionBody;
+import com.dw.core.torresECS.component.ComponentProperties;
 import com.dw.core.torresECS.entity.Entity;
 
 public class RenderSystem {
@@ -37,8 +38,8 @@ public class RenderSystem {
     private static void followEntity(){
 
         try{
-            ComponentBody componentBody = (ComponentBody) followEntity.findComponent(ComponentBody.class);
-            cameraMain.position.lerp(new Vector3(componentBody.getPosX() + componentBody.getSizeX() / 2, componentBody.getPosY() + componentBody.getSizeY() / 2, 0), 0.10f);
+            ComponentProperties componentProperties = (ComponentProperties) followEntity.findComponent(ComponentProperties.class);
+            cameraMain.position.lerp(new Vector3(componentProperties.getPosX() + componentProperties.getWidth() / 2, componentProperties.getPosY() + componentProperties.getHeight() / 2, 0), 0.10f);
         }catch (Exception e){
 
         }
