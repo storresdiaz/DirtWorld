@@ -35,6 +35,9 @@ public class RenderSystem {
         followEntity();
     }
 
+    /**
+     * Method that dictates how the camera follows the follow Entity
+     */
     private static void followEntity(){
 
         try{
@@ -50,6 +53,9 @@ public class RenderSystem {
         viewportMain.update(width, height);
     }
 
+    /**
+     * @param entity The entity for the camera to follow
+     */
     public static void setCameraFollow(Entity entity){
         followEntity = entity;
     }

@@ -35,6 +35,9 @@ public class Entity {
 
     }
 
+    /**
+     * @return Returns a target entity which can be used for multi-entity interactions for example as collision detection.
+     */
     public Entity getTargetEntity() {
         return targetEntity;
     }
@@ -118,6 +121,11 @@ public class Entity {
         this.entityID = entityID;
     }
 
+    /**
+     * Finds and returns a component from this entity.
+     * @param componentType The class of the component you want to find.
+     * @return returns a component if found or null.
+     */
     public Component findComponent(Class<? extends Component> componentType){
         for(Component component: components){
             if(componentType.isInstance(component)){

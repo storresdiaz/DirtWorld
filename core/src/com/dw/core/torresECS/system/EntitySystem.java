@@ -37,6 +37,9 @@ public class EntitySystem {
 
     }
 
+    /**
+     * @param entityID The entity ID
+     */
     private static void removeEntity(double entityID){
         try{
             entities.remove(entityID);
@@ -45,6 +48,16 @@ public class EntitySystem {
         }
     }
 
+    /**
+     * Used to add a new entity into the game system.
+     * Example Usage :
+     *<pre>
+     *{@code
+     *  EntitySystem.register(new Entity());
+     * }
+     *</pre>
+     * @param entity the entity to add.
+     */
     public static void registerEntity(Entity entity){
         currentEntityID += 0.01;
         entity.setEntityID(currentEntityID);

@@ -3,7 +3,9 @@ package com.dw.core.torresECS.component;
 import com.dw.core.torresECS.entity.Entity;
 
 
-// This component is added to an entity by default.
+/**
+ * Automatically added to each Entity.
+ */
 public class ComponentProperties extends Component {
 
     private float posX, posY, width, height;
