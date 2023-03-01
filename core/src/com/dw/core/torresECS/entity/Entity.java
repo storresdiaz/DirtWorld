@@ -14,6 +14,8 @@ public class Entity {
 
     private double entityID;
 
+    private ComponentProperties componentProperties;
+
     private Entity targetEntity;
 
     public Entity(){
@@ -82,6 +84,9 @@ public class Entity {
 
         if(okToAppend) {
             components.add(componentToAppend);
+            if(componentToAppend instanceof ComponentProperties){
+                componentProperties = (ComponentProperties) componentToAppend;
+            }
         }
 
     }
@@ -89,7 +94,7 @@ public class Entity {
     public void removeComponent(Class<? extends Component> componentType){
 
         for(Component component: components){
-            if(componentType.isInstance(component)){
+            if(componentType.isInstance(component) && !(component instanceof ComponentProperties) ){
                 components.remove(component);
                 break;
             }
