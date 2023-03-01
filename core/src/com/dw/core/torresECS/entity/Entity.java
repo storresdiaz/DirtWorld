@@ -144,4 +144,8 @@ public class Entity {
         EntitySystem.destroyEntity(this);
     }
 
+    public ComponentProperties getProperties(){
+        return componentProperties;
+    }
+
 }
