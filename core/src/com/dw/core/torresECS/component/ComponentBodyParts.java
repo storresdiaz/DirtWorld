@@ -1,73 +1,100 @@
 package com.dw.core.torresECS.component;
 
+import com.badlogic.gdx.math.Rectangle;
 import com.dw.core.torresECS.entity.Entity;
 
-public class ComponentBodyPart extends Component {
+import java.util.HashMap;
 
-    private String name;
-    private float relativePosX, relativePosY, worldPosX, worldPosY;
 
-    public ComponentBodyPart(Entity parentEntity, String name) {
-        super(parentEntity);
-        this.name = name;
+public class ComponentBodyParts extends Component {
+
+    public class BodyPart{
+        private float relativePosX, relativePosY, worldPosX, worldPosY;
+        private String name;
+
+        private Rectangle collisionRect;
+
+        public BodyPart(String name){
+            this.name = name;
+            collisionRect = new Rectangle();
+        }
+
+        public void update(){
+            collisionRect.setPosition(worldPosX, worldPosY);
+        }
+
+        public float getRelativePosX() {
+            return relativePosX;
+        }
+
+        public void setRelativePosX(float relativePosX) {
+            this.relativePosX = relativePosX;
+        }
+
+        public float getRelativePosY() {
+            return relativePosY;
+        }
+
+        public void setRelativePosY(float relativePosY) {
+            this.relativePosY = relativePosY;
+        }
+
+        public float getWorldPosX() {
+            return worldPosX;
+        }
+
+        public void setWorldPosX(float worldPosX) {
+            this.worldPosX = worldPosX;
+        }
+
+        public float getWorldPosY() {
+            return worldPosY;
+        }
+
+        public void setWorldPosY(float worldPosY) {
+            this.worldPosY = worldPosY;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
     }
 
-    public ComponentBodyPart(Entity parentEntity, String name, float relativePosX, float relativePosY) {
+    private HashMap<String, BodyPart> bodyParts;
+
+    public ComponentBodyParts(Entity parentEntity) {
         super(parentEntity);
-        this.name = name;
-        this.relativePosX = relativePosX;
-        this.relativePosY = relativePosY;
+        bodyParts = new HashMap<>();
     }
 
     @Override
     public void update() {
         super.update();
-        try{
-            setWorldPosX(getParentEntity().getProperties().getPosX() + relativePosX);
-            setWorldPosY(getParentEntity().getProperties().getPosY() + relativePosY);
-        }catch (Exception e){
-
+        for(BodyPart bodyPart: bodyParts.values()){
+            bodyPart.setWorldPosX(getParentEntity().getProperties().getPosX() + bodyPart.getRelativePosX());
+            bodyPart.setWorldPosY(getParentEntity().getProperties().getPosY() + bodyPart.getRelativePosY());
+            bodyPart.update();
         }
-
     }
 
-    public String getName() {
-        return name;
+    public void addBodyPart(BodyPart bodyPart){
+        if(!bodyParts.containsKey(bodyPart.getName())){
+            bodyParts.put(bodyPart.getName(), bodyPart);
+        }
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void removeBodyPart(String name){
+        if(bodyParts.containsKey(name)){
+            bodyParts.remove(name);
+        }
     }
 
-    public float getRelativePosX() {
-        return relativePosX;
+    public HashMap<String, BodyPart> getBodyParts(){
+        return bodyParts;
     }
 
-    public void setRelativePosX(float relativePosX) {
-        this.relativePosX = relativePosX;
-    }
-
-    public float getRelativePosY() {
-        return relativePosY;
-    }
-
-    public void setRelativePosY(float relativePosY) {
-        this.relativePosY = relativePosY;
-    }
-
-    public float getWorldPosX() {
-        return worldPosX;
-    }
-
-    public void setWorldPosX(float worldPosX) {
-        this.worldPosX = worldPosX;
-    }
-
-    public float getWorldPosY() {
-        return worldPosY;
-    }
-
-    public void setWorldPosY(float worldPosY) {
-        this.worldPosY = worldPosY;
-    }
 }
