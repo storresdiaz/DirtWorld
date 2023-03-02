@@ -16,6 +16,8 @@ public class ComponentBodyParts extends Component {
 
         private Rectangle collisionRect;
 
+        private boolean isVisible = true;
+
         public BodyPart(String name){
             this.name = name;
             collisionRect = new Rectangle();
@@ -75,6 +77,18 @@ public class ComponentBodyParts extends Component {
 
         public void setCollisionRect(Rectangle collisionRect) {
             this.collisionRect = collisionRect;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public boolean isVisible() {
+            return isVisible;
+        }
+
+        public void setVisible(boolean visible) {
+            isVisible = visible;
         }
     }
 
