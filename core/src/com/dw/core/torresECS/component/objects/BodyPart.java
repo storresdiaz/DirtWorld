@@ -7,7 +7,7 @@ public class BodyPart{
     private float relativePosX, relativePosY, worldPosX, worldPosY;
     private String name;
 
-    private ComponentSprites.Sprite sprite;
+    private Sprite sprite;
 
     private Rectangle collisionRect;
 
@@ -58,11 +58,11 @@ public class BodyPart{
         return name;
     }
 
-    public ComponentSprites.Sprite getSprite() {
+    public Sprite getSprite() {
         return sprite;
     }
 
-    public void setSprite(ComponentSprites.Sprite sprite) {
+    public void setSprite(Sprite sprite) {
         this.sprite = sprite;
     }
 
