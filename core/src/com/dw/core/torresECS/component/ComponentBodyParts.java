@@ -1,96 +1,13 @@
 package com.dw.core.torresECS.component;
 
 import com.badlogic.gdx.math.Rectangle;
+import com.dw.core.torresECS.component.objects.BodyPart;
 import com.dw.core.torresECS.entity.Entity;
 
 import java.util.HashMap;
 
 
 public class ComponentBodyParts extends Component {
-
-    public class BodyPart{
-        private float relativePosX, relativePosY, worldPosX, worldPosY;
-        private String name;
-
-        private ComponentSprites.Sprite sprite;
-
-        private Rectangle collisionRect;
-
-        private boolean isVisible = true;
-
-        public BodyPart(String name){
-            this.name = name;
-            collisionRect = new Rectangle();
-        }
-
-        public void update(){
-            collisionRect.setPosition(worldPosX, worldPosY);
-        }
-
-        public float getRelativePosX() {
-            return relativePosX;
-        }
-
-        public void setRelativePosX(float relativePosX) {
-            this.relativePosX = relativePosX;
-        }
-
-        public float getRelativePosY() {
-            return relativePosY;
-        }
-
-        public void setRelativePosY(float relativePosY) {
-            this.relativePosY = relativePosY;
-        }
-
-        public float getWorldPosX() {
-            return worldPosX;
-        }
-
-        public void setWorldPosX(float worldPosX) {
-            this.worldPosX = worldPosX;
-        }
-
-        public float getWorldPosY() {
-            return worldPosY;
-        }
-
-        public void setWorldPosY(float worldPosY) {
-            this.worldPosY = worldPosY;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public ComponentSprites.Sprite getSprite() {
-            return sprite;
-        }
-
-        public void setSprite(ComponentSprites.Sprite sprite) {
-            this.sprite = sprite;
-        }
-
-        public Rectangle getCollisionRect() {
-            return collisionRect;
-        }
-
-        public void setCollisionRect(Rectangle collisionRect) {
-            this.collisionRect = collisionRect;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public boolean isVisible() {
-            return isVisible;
-        }
-
-        public void setVisible(boolean visible) {
-            isVisible = visible;
-        }
-    }
 
     private HashMap<String, BodyPart> bodyParts;
 
