@@ -3,11 +3,10 @@ package com.dw.core.screens;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.dw.core.Core;
-import com.dw.core.torresECS.entity.EntityDebugBox;
-import com.dw.core.torresECS.entity.EntityPlayer;
-import com.dw.core.torresECS.entity.Entity;
-import com.dw.core.torresECS.system.EntitySystem;
-import com.dw.core.torresECS.system.RenderSystem;
+import com.dw.core.tntEngine.ECS.entity.EntityDebugBox;
+import com.dw.core.tntEngine.ECS.entity.EntityPlayer;
+import com.dw.core.tntEngine.ECS.system.EntitySystem;
+import com.dw.core.tntEngine.ECS.system.RenderSystem;
 
 public class ScreenGame implements Screen {
 

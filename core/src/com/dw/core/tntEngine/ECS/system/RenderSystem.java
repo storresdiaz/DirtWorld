@@ -1,12 +1,11 @@
-package com.dw.core.torresECS.system;
+package com.dw.core.tntEngine.ECS.system;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.dw.core.torresECS.component.ComponentCollisionBody;
-import com.dw.core.torresECS.component.ComponentProperties;
-import com.dw.core.torresECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.component.ComponentProperties;
+import com.dw.core.tntEngine.ECS.entity.Entity;
 
 public class RenderSystem {
 

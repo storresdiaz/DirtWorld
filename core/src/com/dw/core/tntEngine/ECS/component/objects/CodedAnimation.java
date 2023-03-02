@@ -1,4 +1,4 @@
-package com.dw.core.torresECS.component.objects;
+package com.dw.core.tntEngine.ECS.component.objects;
 
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.TimeUtils;

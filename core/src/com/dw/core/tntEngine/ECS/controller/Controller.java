@@ -1,7 +1,7 @@
-package com.dw.core.torresECS.controller;
+package com.dw.core.tntEngine.ECS.controller;
 
-import com.dw.core.torresECS.component.Component;
-import com.dw.core.torresECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.component.Component;
 
 import java.util.HashMap;
 

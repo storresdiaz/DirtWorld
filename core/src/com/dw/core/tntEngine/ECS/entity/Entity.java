@@ -1,9 +1,9 @@
-package com.dw.core.torresECS.entity;
+package com.dw.core.tntEngine.ECS.entity;
 
-import com.dw.core.torresECS.component.Component;
-import com.dw.core.torresECS.component.ComponentProperties;
-import com.dw.core.torresECS.controller.Controller;
-import com.dw.core.torresECS.system.EntitySystem;
+import com.dw.core.tntEngine.ECS.component.Component;
+import com.dw.core.tntEngine.ECS.component.ComponentProperties;
+import com.dw.core.tntEngine.ECS.controller.Controller;
+import com.dw.core.tntEngine.ECS.system.EntitySystem;
 
 import java.util.ArrayList;
 

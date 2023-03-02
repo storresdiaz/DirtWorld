@@ -1,8 +1,7 @@
-package com.dw.core.torresECS.component;
+package com.dw.core.tntEngine.ECS.component;
 
-import com.badlogic.gdx.math.Rectangle;
-import com.dw.core.torresECS.component.objects.BodyPart;
-import com.dw.core.torresECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.component.objects.BodyPart;
+import com.dw.core.tntEngine.ECS.entity.Entity;
 
 import java.util.HashMap;
 

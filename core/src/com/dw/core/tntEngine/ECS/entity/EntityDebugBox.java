@@ -1,8 +1,8 @@
-package com.dw.core.torresECS.entity;
+package com.dw.core.tntEngine.ECS.entity;
 
-import com.dw.core.torresECS.component.ComponentCollisionBody;
-import com.dw.core.torresECS.controller.ControllerCollisionDetection;
-import com.dw.core.torresECS.controller.ControllerRenderDebug;
+import com.dw.core.tntEngine.ECS.component.ComponentCollisionBody;
+import com.dw.core.tntEngine.ECS.controller.ControllerCollisionDetection;
+import com.dw.core.tntEngine.ECS.controller.ControllerRenderDebug;
 
 public class EntityDebugBox extends Entity {
 

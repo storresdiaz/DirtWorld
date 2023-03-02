@@ -1,7 +1,6 @@
-package com.dw.core.torresECS.component.objects;
+package com.dw.core.tntEngine.ECS.component.objects;
 
 import com.badlogic.gdx.math.Rectangle;
-import com.dw.core.torresECS.component.ComponentSprites;
 
 public class BodyPart{
     private float relativePosX, relativePosY, worldPosX, worldPosY;

@@ -1,7 +1,7 @@
-package com.dw.core.torresECS.component;
+package com.dw.core.tntEngine.ECS.component;
 
 import com.badlogic.gdx.math.Rectangle;
-import com.dw.core.torresECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.entity.Entity;
 
 public class ComponentCollisionBody extends Component {
 

@@ -1,11 +1,10 @@
-package com.dw.core.torresECS.controller;
+package com.dw.core.tntEngine.ECS.controller;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
-import com.dw.core.torresECS.component.ComponentCollisionBody;
-import com.dw.core.torresECS.component.ComponentProperties;
-import com.dw.core.torresECS.entity.Entity;
-import com.dw.core.torresECS.system.RenderSystem;
+import com.dw.core.tntEngine.ECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.system.RenderSystem;
+import com.dw.core.tntEngine.ECS.component.ComponentCollisionBody;
 
 public class ControllerRenderDebug extends Controller {
 

@@ -1,9 +1,7 @@
-package com.dw.core.torresECS.system;
+package com.dw.core.tntEngine.ECS.system;
 
-import com.dw.core.torresECS.component.Component;
-import com.dw.core.torresECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.entity.Entity;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class EntitySystem {

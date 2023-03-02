@@ -1,10 +1,9 @@
-package com.dw.core.torresECS.controller;
+package com.dw.core.tntEngine.ECS.controller;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
-import com.dw.core.torresECS.component.ComponentCollisionBody;
-import com.dw.core.torresECS.component.ComponentProperties;
-import com.dw.core.torresECS.entity.Entity;
+import com.dw.core.tntEngine.ECS.component.ComponentProperties;
+import com.dw.core.tntEngine.ECS.entity.Entity;
 
 public class ControllerPlayerMovement extends Controller {
 
