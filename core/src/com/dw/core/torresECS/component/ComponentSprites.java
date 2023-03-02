@@ -238,6 +238,8 @@ public class ComponentSprites extends Component {
                 if(isLooping && currentFrame > totalFrames){
                     currentFrame = 0;
                 }
+                setCurrentPosX(getElementByIndex(steps, currentFrame).x);
+                setCurrentPosY(getElementByIndex(steps, currentFrame).y);
             }
 
             if(TimeUtils.timeSinceMillis(startTime) >= animationSpeed && currentFrame <= totalFrames){
@@ -260,7 +262,7 @@ public class ComponentSprites extends Component {
             totalFrames = steps.size();
         }
 
-        private Object getElementByIndex(LinkedHashMap map, int index){
+        private Vector2 getElementByIndex(LinkedHashMap<String, Vector2> map, int index){
             return map.get((map.keySet().toArray())[index]);
         }
 
@@ -276,6 +278,21 @@ public class ComponentSprites extends Component {
             isLooping = looping;
         }
 
+        public float getCurrentPosX() {
+            return currentPosX;
+        }
+
+        public void setCurrentPosX(float currentPosX) {
+            this.currentPosX = currentPosX;
+        }
+
+        public float getCurrentPosY() {
+            return currentPosY;
+        }
+
+        public void setCurrentPosY(float currentPosY) {
+            this.currentPosY = currentPosY;
+        }
     }
 
     public HashMap<String, Sprite> sprites;
