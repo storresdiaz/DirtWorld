@@ -12,6 +12,8 @@ public class ComponentBodyParts extends Component {
         private float relativePosX, relativePosY, worldPosX, worldPosY;
         private String name;
 
+        private ComponentSprites.Sprite sprite;
+
         private Rectangle collisionRect;
 
         public BodyPart(String name){
@@ -59,8 +61,20 @@ public class ComponentBodyParts extends Component {
             return name;
         }
 
-        public void setName(String name) {
-            this.name = name;
+        public ComponentSprites.Sprite getSprite() {
+            return sprite;
+        }
+
+        public void setSprite(ComponentSprites.Sprite sprite) {
+            this.sprite = sprite;
+        }
+
+        public Rectangle getCollisionRect() {
+            return collisionRect;
+        }
+
+        public void setCollisionRect(Rectangle collisionRect) {
+            this.collisionRect = collisionRect;
         }
     }
 
