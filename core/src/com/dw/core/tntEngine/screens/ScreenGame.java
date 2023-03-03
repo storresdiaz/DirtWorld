@@ -1,8 +1,8 @@
-package com.dw.core.screens;
+package com.dw.core.tntEngine.screens;
 
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.dw.core.Core;
+import com.dw.core.tntEngine.Core;
 import com.dw.core.tntEngine.ECS.entity.EntityDebugBox;
 import com.dw.core.tntEngine.ECS.entity.EntityPlayer;
 import com.dw.core.tntEngine.ECS.system.EntitySystem;

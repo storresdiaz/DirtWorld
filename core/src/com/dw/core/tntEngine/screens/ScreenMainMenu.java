@@ -1,7 +1,7 @@
-package com.dw.core.screens;
+package com.dw.core.tntEngine.screens;
 
 import com.badlogic.gdx.Screen;
-import com.dw.core.Core;
+import com.dw.core.tntEngine.Core;
 
 public class ScreenMainMenu implements Screen {
 

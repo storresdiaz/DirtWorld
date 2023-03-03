@@ -1,11 +1,9 @@
-package com.dw.core;
+package com.dw.core.tntEngine;
 
 import com.badlogic.gdx.*;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.dw.core.screens.ScreenGame;
-import com.dw.core.screens.ScreenMainMenu;
+import com.dw.core.tntEngine.screens.ScreenGame;
+import com.dw.core.tntEngine.screens.ScreenMainMenu;
 
 public class Core extends Game {
 
